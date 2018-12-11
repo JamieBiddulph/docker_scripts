@@ -8,7 +8,7 @@ read cname
 echo "Enter image name: "
 read iname
 
-docker run -dit -p $dport:80 --name $cname -v /path/to/your/local/files:/var/opt/files:ro $iname
+docker run -dit -p $dport:80 --name $cname $iname
 
 docker exec -d $cname /etc/init.d/mysql start
 
